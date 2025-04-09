@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrameFit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #fff;
+            color: #000;
+        }
+        .navbar {
+            background-color: #0d6efd;
+        }
+        .navbar-brand,
+        .nav-link {
+            color: #fff !important;
+        }
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+        .section {
+            padding: 80px 20px;
+        }
+        .accordion-item,
+        .accordion-button {
+            background-color: #f8f9fa;
+            color: #000;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #e7f1ff;
+        }
+        .btn-outline-light {
+            border-color: #0d6efd;
+            color: #0d6efd;
+        }
+        .btn-outline-light:hover {
+            background-color: #0d6efd;
+            color: #fff;
+        }
+        .modal-content {
+            background-color: #fff;
+            color: #000;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .text-justify {
+            text-align: justify;
+        }
+        .Gambar1 {
+            width: 900px;
+            height: 500px;
+        }
+        .Gambar2 {
+            width: 550px;
+            height: 340px;
+        }
+        .Gambar3{
+            width: 550px;
+            height: 340px;
+        }
+        .Gambar4{
+            width: 550px;
+            height: 340px;
+        }
+        .Gambar5{
+            width: 550px;
+            height: 340px;
+        }
+        .Gambar6{
+            width: 550px;
+            height: 340px;
+        }
+        .Gambar7{
+            width: 550px;
+            height: 340px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm border-bottom bg-primary mb-4">
+        <div class="container px-4">
+            <a class="navbar-brand text-white fw-bold fs-1" href="#">Frame<span class="text-warning">Fit</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#profil">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#rekomendasi">Rekomendasi</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#lainnya">Informasi Lainnya</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#tentang">Tentang Kami</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Profil -->
+    <section id="profil" class="section container">
+        <div class="row align-items-center mt-5">
+            <div class="col-md-4">
+                <img src="IMG_1197.JPG" alt="Gambar Profil">
+            </div>
+            <div class="col-md-8">
+                <h2>Profil</h2>
+                <p class="text-justify">FrameFit adalah website yang membantu pengguna menemukan frame kacamata yang sesuai dengan bentuk wajah, warna undertone kulit, dan gaya pribadi mereka. Dengan fitur interaktif, pengguna bisa menjawab beberapa pertanyaan sederhana atau menggunakan kamera untuk memindai wajah mereka. Setelah itu, FrameFit akan memberikan rekomendasi frame yang cocok, baik dari segi bentuk maupun warna, sehingga tampilan pengguna bisa lebih seimbang dan percaya diri.
+
+                    Tidak hanya soal bentuk wajah, FrameFit juga mempertimbangkan karakteristik lain seperti warm atau cool undertone, serta preferensi gaya, apakah itu minimalis, klasik, atau lebih modern dan berani. Dengan begitu, setiap rekomendasi yang diberikan benar-benar personal dan relevan.
+                    
+                    FrameFit dirancang supaya mudah digunakan oleh siapa saja, baik yang baru pertama kali memilih kacamata maupun yang ingin mencoba gaya baru. Tujuan utamanya adalah membantu setiap orang menemukan frame kacamata yang bukan hanya nyaman dipakai, tetapi juga mampu melengkapi penampilan dan menonjolkan karakter pribadi mereka.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rekomendasi -->
+    <section id="rekomendasi" class="section container">
+        <h2>Rekomendasi</h2>
+        <div class="accordion" id="rekomendasiAccordion">
+ <!-- Pertanyaan 1 -->
+ <div class="accordion-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+            Yuk,pilih bentuk wajah kamu!
+        </button>
+    </h2>
+    <div id="q1" class="accordion-collapse collapse">
+        <div class="accordion-body">
+            <div class="form-check">
+                <input class="form-check-input pilihan" type="radio" name="q1" value="Pilihan A" id="q1a">
+                <label class="form-check-label" for="q1a">
+                    Pilihan A
+                    <img src="Wajah Oval.png" width="80" class="img-fluid d-block mt-1" alt="Pilihan A">
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input pilihan" type="radio" name="q1" value="Pilihan B" id="q1b">
+                <label class="form-check-label" for="q1b">
+                    Pilihan B
+                    <img src="Wajah Berlian.png" width="80" class="img-fluid d-block mt-1" alt="Pilihan B">
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input pilihan" type="radio" name="q1" value="Pilihan C" id="q1c">
+                <label class="form-check-label" for="q1c">
+                    Pilihan C
+                    <img src="Wajah Bulat.png" width="80" class="img-fluid d-block mt-1" alt="Pilihan C">
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input pilihan" type="radio" name="q1" value="Pilihan D" id="q1d">
+                <label class="form-check-label" for="q1d">
+                    Pilihan D
+                    <img src="Wajah Hati.png" width="80" class="img-fluid d-block mt-1" alt="Pilihan D">
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input pilihan" type="radio" name="q1" value="Pilihan E" id="q1e">
+                <label class="form-check-label" for="q1e">
+                    Pilihan E
+                    <img src="Wajah Kotak.png" width="80" class="img-fluid d-block mt-1" alt="Pilihan E">
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input pilihan" type="radio" name="q1" value="Pilihan F" id="q1f">
+                <label class="form-check-label" for="q1f">
+                    Pilihan F
+                    <img src="Wajah Lonjong.png" width="80" class="img-fluid d-block mt-1" alt="Pilihan F">
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pertanyaan 2 -->
+<div class="accordion-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+            Sesuaikan dengan undertone kamu!
+        </button>
+    </h2>
+    <div id="q2" class="accordion-collapse collapse">
+        <div class="accordion-body">
+            <div class="form-check">
+                <input class="form-check-input pilihan" type="radio" name="q2" value="Pilihan G" id="q2g">
+                <label class="form-check-label" for="q2g">Kulit Cerah Kemerahan (Cool Undertone)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input pilihan" type="radio" name="q2" value="Pilihan H" id="q2h">
+                <label class="form-check-label" for="q2h">Kulit Cerah Kekuningan (Warm Undertone)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input pilihan" type="radio" name="q2" value="Pilihan I" id="q2i">
+                <label class="form-check-label" for="q2i">Kulit Medium Kemerahan/Kebiruan (Cool Undertone)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input pilihan" type="radio" name="q2" value="Pilihan J" id="q2j">
+                <label class="form-check-label" for="q2j">Kulit Medium Kekuningan/Netral (Warm/Netral Undertone)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input pilihan" type="radio" name="q2" value="Pilihan K" id="q2k">
+                <label class="form-check-label" for="q2k">Kulit Gelap Kebiruan/Kemerahan (Cool Undertone)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input pilihan" type="radio" name="q2" value="Pilihan L" id="q2l">
+                <label class="form-check-label" for="q2l">Kulit Gelap Keemasan/Coklat Kemerahan (Warm Undertone)</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pertanyaan 3 -->
+<div class="accordion-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+            Pilih gaya yang sesuai dengan seleramu!
+        </button>
+    </h2>
+    <div id="q3" class="accordion-collapse collapse">
+        <div class="accordion-body">
+            <div class="form-check">
+                <input class="form-check-input pilihan" type="radio" name="q3" value="Pilihan M" id="q3m">
+                <label class="form-check-label" for="q3m">Minimalis & Simpel</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input pilihan" type="radio" name="q3" value="Pilihan N" id="q3n">
+                <label class="form-check-label" for="q3n">Trendy & Modis</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input pilihan" type="radio" name="q3" value="Pilihan O" id="q3o">
+                <label class="form-check-label" for="q3o">Elegant & Classic</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input pilihan" type="radio" name="q3" value="Pilihan P" id="q3p">
+                <label class="form-check-label" for="q3p">Bold & Statement</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input pilihan" type="radio" name="q3" value="Pilihan Q" id="q3q">
+                <label class="form-check-label" for="q3q">Casual & Santai</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Tombol Tampilkan Hasil -->
+<div class="text-center mt-4">
+    <button class="btn btn-primary" onclick="tampilkanHasil(event)" data-bs-toggle="modal" data-bs-target="#hasilModal">
+        Lihat Hasil
+    </button>
+</div>
+
+<!-- Modal Hasil -->
+<div class="modal fade" id="hasilModal" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Hasil Pilihan Kamu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row text-center" id="hasilGambarGrid">
+                    <!-- Isi dinamis via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script -->
+<script>
+    const pilihanData = {
+        q1: {
+            "Pilihan A": { img: "fr oval.jpeg", keterangan: "Wajah oval terkenal seimbang dan cocok dengan berbagai model frame. Kamu bisa bebas mencoba frame kotak, bulat, atau cat-eye untuk menonjolkan fitur wajah. Dengan bentuk wajah yang proporsional, hampir semua gaya frame akan terlihat paseterangan A" },
+            "Pilihan B": { img: "fr berlian.jpeg", keterangan: "Wajah berbentuk berlian ditandai dengan tulang pipi yang tajam dan menonjol, serta dahi dan dagu yang sempit. Frame semi-rimless, cat eye, oval seperti yang ada di gambar kedua sangat cocok untuk wajah berlian. Bentuk ini menyeimbangkan bagian atas dan bawah wajah, serta memberi efek lembut pada kontur wajah yang tajam." },
+            "Pilihan C": { img: "fr bulat.jpeg", keterangan: "Wajah dengan bentuk bulat biasanya memiliki ukuran panjang dan lebar yang hampir seimbang. Maka dari itu, jika wajahmu bulat, sebaiknya pilih frame kacamata yang bisa menciptakan ilusi wajah tampak lebih panjang" },
+            "Pilihan D": { img: "fr hati.jpeg", keterangan: "Wajah dengan bentuk hati memiliki dahi yang lebar, tulang pipi tinggi, dan dagu yang runcing. Frame cat eye, bulat, atau aviator seperti yang terlihat pada gambar pertama sangat cocok untuk wajah hati karena membantu menarik perhatian ke bagian mata dan melembutkan area dahi yang lebar." },
+            "Pilihan E": { img: "fr kotak.jpeg", keterangan: "Wajah kotak punya rahang tegas dan dahi serta pipi sejajar. Frame bulat membantu menyamarkan garis tegas dan membuat tampilan lebih seimbang. Frame aviator dengan lengkungan halus juga melembutkan garis wajah, memberi kesan santai dan stylish. Sementara itu, frame browline menambah dimensi di bagian atas wajah dan membuat proporsi wajah lebih seimbang" },
+            "Pilihan F": { img: "fr lonjong.jpeg", keterangan: "Wajah lonjong memiliki panjang wajah yang lebih besar daripada lebarnya, dengan proporsi yang seimbang. Bentuk wajah ini cocok hampir dengan semua jenis frame, namun idealnya gunakan frame yang memberi kesan lebar untuk mengimbangi panjang wajah.Frame kotak, wayfarer, atau cateye sangat cocok karena memberikan ilusi wajah yang lebih pendek dan lebar, menjaga keseimbangan bentuk lonjong." },
+        },
+        q2: {
+            "Pilihan G": { keterangan: "Coba frame warna navy, merah marun, plum, rose gold, atau silver. Hindari warna kuning mencolok atau oranye yang terang" },
+            "Pilihan H": { keterangan: "Frame warna emas, cokelat muda, merah bata, hijau zaitun, atau tembaga bakal kelihatan makin nyatu sama kulitmu. Warna biru terang agak kurang cocok" },
+            "Pilihan I": { keterangan: "Coba frame warna navy, merah marun, plum, rose gold, atau silver. Hindari warna kuning mencolok atau oranye yang terang" },
+            "Pilihan J": { keterangan: "Frame warna champagne gold, cokelat hangat, hijau zaitun, atau motif tortoise shell bakal keren. Karena netral, kamu juga bebas eksplor warna-warna berani" },
+            "Pilihan K": { keterangan: "Warna seperti burgundy, biru gelap, hijau emerald, gunmetal, atau silver bakal cocok banget. Hindari warna kuning cerah atau emas yang terlalu mencolok" },
+            "Pilihan L": { keterangan: "Frame warna emas, copper, amber, tortoise shell, atau oranye keemasan bakal bikin tampilan makin hangat dan keren. Warna pucat seperti abu-abu muda kurang cocok" },
+        },
+        q3: {
+            "Pilihan M": { keterangan: "Frame transparan, material ringan seperti titanium atau acetate tipis, finishing matte atau polished tipis, ataupun engsel yang fleksibel" },
+            "Pilihan N": { keterangan: "Finishing glossy, bertekstur unik, atau motif detail di gagang" },
+            "Pilihan O": { keterangan: "Material stainless steel atau campuran logam, detail halus di bagian gagang, ataupun lensa photochromic" },
+            "Pilihan P": { keterangan: "Material kokoh seperti acetate tebal, motif ukiran halus, atau lensa anti silau" },
+            "Pilihan Q": { keterangan: "Material fleksibel, finishing soft-touch, atau lensa polarized" },
+        }
+    };
+
+    function tampilkanHasil(event) {
+        const hasilGrid = document.getElementById('hasilGambarGrid');
+        hasilGrid.innerHTML = '';
+
+        const jawabanQ1 = document.querySelector('input[name="q1"]:checked');
+        const jawabanQ2 = document.querySelector('input[name="q2"]:checked');
+        const jawabanQ3 = document.querySelector('input[name="q3"]:checked');
+
+        if (!jawabanQ1 || !jawabanQ2 || !jawabanQ3) {
+            event.preventDefault();
+            alert("Silakan pilih jawaban untuk semua pertanyaan (3 jawaban wajib dipilih).");
+            return;
+        }
+
+        // Proses dan tampilkan jawaban Q1 (gambar + keterangan)
+        const dataQ1 = pilihanData.q1[jawabanQ1.value] || {};
+        hasilGrid.innerHTML += `
+            <div class="col-md-4 mb-4">
+                <h6>${jawabanQ1.value}</h6>
+                ${dataQ1.img ? `<img src="${dataQ1.img}" class="img-fluid rounded mb-2" alt="${jawabanQ1.value}">` : ''}
+                <p class="text-muted">Keterangan: ${dataQ1.keterangan || '-'}</p>
+            </div>
+        `;
+
+        // Proses dan tampilkan jawaban Q2 (keterangan saja)
+        const dataQ2 = pilihanData.q2[jawabanQ2.value] || {};
+        hasilGrid.innerHTML += `
+            <div class="col-md-4 mb-4">
+                <h6>${jawabanQ2.value}</h6>
+                <p class="text-muted">Keterangan: ${dataQ2.keterangan || '-'}</p>
+            </div>
+        `;
+
+        // Proses dan tampilkan jawaban Q3 (keterangan saja)
+        const dataQ3 = pilihanData.q3[jawabanQ3.value] || {};
+        hasilGrid.innerHTML += `
+            <div class="col-md-4 mb-4">
+                <h6>${jawabanQ3.value}</h6>
+                <p class="text-muted">Keterangan: ${dataQ3.keterangan || '-'}</p>
+            </div>
+        `;
+    }
+</script>
+
+    </section>
+
+    <!-- Informasi Lainnya -->
+    <section id="lainnya" class="section container">
+        <h1>Informasi Lainnya</h1>
+        <div class="row">
+            <h2>Cara Mengukur Lebar Wajah</h2>
+            <img src="Ukur Wajah.jpeg" alt="Gambar 1" width="100px" height="100px" class="Gambar1">
+                <div class="row">  
+            <p class="text-justify">Sebelum memilih frame yang pas, ada baiknya kita mengenal dulu ukuran wajah sendiri.
+                Dengan mengetahui lebar wajah, kamu bisa menemukan frame yang bukan hanya nyaman dipakai, tapi juga pas secara proporsi. Proses ini sederhana dan bisa kamu lakukan sendiri di rumah hanya dengan bantuan penggaris atau meteran kecil.
+                Pengukuran ini membantu menentukan apakah wajah kamu termasuk kategori kecil, sedang, atau besar. Dengan begitu, pilihan frame bisa lebih terarah dan sesuai dengan karakter wajah kamu. Yuk, ikuti langkah mudah berikut ini!!</p>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <p class="text-justify"> Gunakan penggaris / meteran untuk mengukur bentuk wajah mulai dari pelipis kiri hingga ujung pelipis kanan!</p> 
+                    <p class="text-justify">- < 12,5 cm          = kecil</p></12>
+                    <p class="text-justify">-  \⁠12.5 cm - 13.5 cm = sedang</p></12>
+                    <p class="text-justify">-  ⁠> 13.5 cm         = besar</p>
+                </div>
+                <div class="row">
+            <h2>Cara Membersihkan Lensa Kacamata</h2>
+            <p class="text-justify">Adapun cara yang benar dan aman untuk membersihkan lensa kacamata, agar lensa tidak cepat rusak atau tergores:</p>
+
+                <p class="text-justify">1. Cuci tangan dulu
+                Pastikan tanganmu bersih dari minyak, debu, atau lotion sebelum menyentuh kacamata.</p>
+                
+                <p class="text-justify">2. Bilas kacamata dengan air bersih
+                Gunakan air mengalir (lebih baik air hangat suam-suam kuku) untuk menghilangkan debu dan partikel kasar yang bisa menggores lensa saat dilap.</p>
+                
+                <p class="text-justify">3. Gunakan sabun cair ringan (opsional)
+                Kalau lensa berminyak, bisa teteskan sedikit sabun cair (yang tanpa alkohol dan tanpa pelembap) ke lensa, lalu gosok lembut dengan jari.</p>
+                
+                <p class="text-justify">4. Keringkan dengan kain microfiber
+                Lap lensa secara lembut dengan kain microfiber khusus kacamata
+                Jangan pakai baju, tisu, atau handuk biasa karena bisa menggores lensa</p>
+
+                <p class="text-justify">5. Hindari ini:
+                Jangan pakai cairan pembersih berbahan alkohol, amonia, atau cuka — bisa merusak lapisan anti-refleksi
+                Jangan melap lensa saat kering dan berdebu karena partikel halus bisa bikin goresan
+                Tips tambahan:
+                Simpan kain microfiber di tempat bersih dan cuci secara rutin
+                Simpan kacamata di hardcase saat tidak dipakai
+                Gunakan cairan pembersih khusus kacamata jika diperlukan (bisa dibeli di optik)</p>
+            <div class="row">
+            <div class="col-md-4 mb-3">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="tentang">
+        <footer class="bg-primary text-white text-center py-4 mt-5">
+            <div class="container">
+                <h5 class="mb-3">Hubungi Kami</h5>
+                <p class="mb-1"><strong>Alamat:</strong> Cluster Mega Bodas Blok B3 No.04, Kab. Bandung Barat</p>
+                <p class="mb-1"><strong>Telepon:</strong> 0838-6343-5413</p>
+                <p class="mb-1"><strong>Email:</strong> framefit.id@gmail.com</p>
+                <p class="mb-3"><strong>Jam Operasional:</strong> Senin - Jumat, 08.00 - 17.00</p>
+
+                <!-- Sosial Media -->
+                <div class="mb-3">
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/framefit.id?igsh=b3hlMG5teDc5ODZr&utm_source=qr" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                </div>
+
+                <small>&copy; 2025 FrameFit. All rights reserved.</small>
+            </div>
+        </footer>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
